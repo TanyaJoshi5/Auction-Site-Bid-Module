@@ -8,10 +8,16 @@ An online auction website which aims at making bidding experience very easy.
 Technologies Used:
 
 Programming Language:                     Java
+
 Front-end Programming Technologies:       HTML, JSP, XML
+
 Server-side Programming Technologies:     Java Servlet
+
 Scripting Language:                       JavaScript
+
 Protocol:                                 HTTP
+
 IDE:                                      Eclipse-jee-2020-06(4.16.0)
+
 Server:                                   Apache Tomcat v9.0.37
 

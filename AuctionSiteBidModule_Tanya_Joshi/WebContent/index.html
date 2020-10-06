@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Sign up</title>
+		<style>
+			label 
+			{
+				width: 145px;
+				display: inline-block;
+			}
+			body 
+			{
+				background-color: #ffddcc;
+			}
+		</style>
+		<script>
+			function validation()
+			{
+				var v1=document.getElementById("i1").value;
+				var v2=document.getElementById("i2").value;
+				var v3=document.getElementById("i3").value;
+				var v4=document.getElementById("i4").value;
+				var v5=document.getElementById("i5").value;
+				var res;
+				if(v1==""||v2==""||v3==""||v4==""||v5=="")
+				{
+					document.getElementById("err").innerHTML="Required Data Missing!";
+					document.getElementById("err2").innerHTML=" Enter and Resubmit.";
+				}
+				if(v1.trim()=="")
+				{
+					document.getElementById("msg").innerHTML="Required Field!";
+					res=false;
+				}
+				if(v2.trim()=="")
+				{
+					document.getElementById("msg2").innerHTML="Required Field!";
+					res=false;
+				}
+				if(v3.trim()=="")
+				{
+					document.getElementById("msg3").innerHTML="Required Field!";
+					res=false;
+				}
+				if(v4.trim()=="")
+				{
+					document.getElementById("msg4").innerHTML="Required Field!";
+					res=false;
+				}
+				if(v5.trim()=="")
+				{
+					document.getElementById("msg5").innerHTML="Required Field!";
+					res=false;
+				}
+				if(/^[0-9]+$/.test(form.id.value)&&(/^[A-Za-z ]+$/.test(form.name.value))&&(/^[A-Za-z ]+$/.test(form.yourname.value))&&(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value))&&(/^[0-9]+$/.test(form.amount.value)))
+    			{
+    			 	return true;
+     			}
+   				else
+    	 		{
+     				return false;
+     			}
+				return res;
+			}
+		</script>
+	</head>
+	<body style="text-align: center;">
+		<br>
+		<h1>Welcome to AP Auctions!  Please Enter Bid.</h1>
+		<br>
+		<form method="post" onsubmit="return validation()" action="AuctionServlet" name="form" >
+			<span id="err" style="color:red; font-size:140%;"></span><span id="err2" style="font-size:140%;"></span><br><br><br>
+			<span id="msg"style="color:red;"></span><label for="ItemID">Item ID:</label><input type="text" name="id" id="i1" value=""><br><br>
+			<span id="msg2"style="color:red;"></span><label for="ItemName">Item Name:</label><input type="text" name="name" id="i2" value=""><br><br>
+			<span id="msg3"style="color:red;"></span><label for="YourName">Your Name:</label><input type="text" name="yourname" id="i3" value=""><br><br>
+			<span id="msg4"style="color:red;"></span><label for="YourEmailAddress">Your Email Address:</label><input type="text"  name="email" id="i4" value=""><br><br>
+			<span id="msg5"style="color:red;"></span><label for="AmountBid">Amount Bid:</label><input type="text" name="amount" id="i5" value=""><br><br> 
+			Auto-increment bid to match other bidders?:<input type="checkbox" name="auto" value="true"><br><br> 
+			<input type="submit" value="Submit Bid" style="background-color:#c4f1fe; border:none; outline:1px solid #4dc3ff; focus:#66ccff;">
+		</form>
+	</body>
+</html>
